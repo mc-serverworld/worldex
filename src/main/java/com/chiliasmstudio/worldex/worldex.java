@@ -1,4 +1,15 @@
 package com.chiliasmstudio.worldex;
 
-public class worldex {
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class worldex extends JavaPlugin{
+    @Override
+    public void onLoad() {
+
+    }
+
+    @Override
+    public void onEnable() {
+
+    }
 }
