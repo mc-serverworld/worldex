@@ -13,7 +13,7 @@
 
 
     <build>
-        <finalName>${project.name}-${project.parent.version}</finalName>
+        <finalName>${project.name}-${project.version}</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
         <resources>
             <resource>
@@ -27,6 +27,34 @@
         </resources>
 
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filters>
+                        <filter>
+                            <artifact>com.mc-serverworld:worldIdiot:*</artifact>
+                            <excludes>
+                                <exclude>*.yml</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>${project.basedir}/output/${project.name}-${project.version}.jar</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
