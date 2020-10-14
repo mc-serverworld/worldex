@@ -1,4 +1,4 @@
-main: com.serverworld.worldex
+main: com.serverworld.worldex.worldex
 name: ${project.name}
 version: ${project.version}
 author: mc-serverworld
