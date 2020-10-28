@@ -9,6 +9,6 @@ public class PlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event)
     {
-        event.getPlayer().sendMessage(ChatColor.YELLOW + "HO:: plaer");
+        event.getPlayer().sendMessage(ChatColor.YELLOW + "HOLL:: plaer");
     }
 }
