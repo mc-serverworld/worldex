@@ -12,7 +12,8 @@ public class worldex extends JavaPlugin{
     @Override
     public void onEnable() {
         this.getCommand("kit").setExecutor(new CommandKit());
-        getLogger().info(ChatColor.GREEN + "Hello world");
+        getLogger().info(ChatColor.GREEN + "Hello word");
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 
     }
 }
