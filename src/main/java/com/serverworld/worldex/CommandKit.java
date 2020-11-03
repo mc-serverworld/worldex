@@ -19,7 +19,7 @@ public class CommandKit implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
       sender.sendMessage("測試");
       try {
-          downloadNet(args[0],"sdad.jpg");
+          downloadNet(args[0],"sdad.jar");
       }catch (Exception E){
 
       }
